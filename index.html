@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Daniel Ghazal – AI automation & agent builder and humanitarian project manager based in Beirut, Lebanon. Projects, experience, publications and certificates.">
-<meta property="og:title" content="Daniel Ghazal – Portfolio"><meta property="og:description" content="AI automation & agent builder | 5+ years in humanitarian project management | Beirut, Lebanon">
+<meta property="og:title" content="Daniel Ghazal – Portfolio"><meta property="og:description" content="AI automation & agent builder | 5+ years in humanitarian project management | Beirut, Lebanon"><meta property="og:image" content="https://danielghazal.github.io/profile-photo.jpg">
+<link rel="icon" href="profile-photo.jpg">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}*,*::before,*::after{box-sizing:border-box}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Daniel Ghazal – Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -39,6 +40,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .hero{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
 .hero>*{min-width:0}
 .intro{display:flex;flex-direction:column;gap:18px}
+.name-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.name-block{display:flex;flex-direction:column;gap:6px;min-width:0}
+.avatar{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid var(--accent-soft);flex-shrink:0}
 .roles{font-size:1.1rem;color:var(--muted);max-width:52ch}
 .roles strong{color:var(--fg);font-weight:600}
 .where{display:flex;flex-wrap:wrap;gap:8px}
@@ -168,8 +172,10 @@ dialog#viewer::backdrop{background:rgba(8,14,12,.72)}
 
   <header class="hero">
     <div class="intro">
-      <div class="eyebrow">Portfolio</div>
-      <h1>Daniel Ghazal</h1>
+      <div class="name-row">
+        <img class="avatar" src="profile-photo.jpg" alt="Daniel Ghazal" width="104" height="104">
+        <div class="name-block"><div class="eyebrow">Portfolio</div><h1>Daniel Ghazal</h1></div>
+      </div>
       <p class="roles"><strong>AI automation &amp; agent builder</strong> with 5+ years of <strong>project management</strong> in international development. I build workflows and AI agents that take repetitive work off teams, and I scope them around real processes, budgets and people.</p>
       <div class="where">
         <span class="chip">Beirut, Lebanon</span>
