@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Daniel Ghazal – AI automation & agent builder and humanitarian project manager based in Beirut, Lebanon. Projects, experience, publications and certificates.">
+<meta property="og:title" content="Daniel Ghazal – Portfolio"><meta property="og:description" content="AI automation & agent builder | 5+ years in humanitarian project management | Beirut, Lebanon">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}*,*::before,*::after{box-sizing:border-box}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Daniel Ghazal – Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single readable column; hero pairs a short intro with a live-looking workflow trace (request → agent → tools → report) */
+:root{
+  --bg:#F4F6F5; --surface:#FFFFFF; --fg:#15201E; --muted:#56635F; --line:#D9E0DD;
+  --accent:#1D6B58; --accent-soft:#E2EFEA; --amber:#9A5B12; --amber-soft:#F6EAD9;
+  --display:"Sora",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1513; --surface:#151E1C; --fg:#E4EBE8; --muted:#9AA8A3; --line:#26332F;
+  --accent:#62C4A8; --accent-soft:#1A2E28; --amber:#E2A55A; --amber-soft:#2E2417; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1513; --surface:#151E1C; --fg:#E4EBE8; --muted:#9AA8A3; --line:#26332F;
+  --accent:#62C4A8; --accent-soft:#1A2E28; --amber:#E2A55A; --amber-soft:#2E2417; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:48px 64px;display:flex;flex-direction:column;gap:64px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:clamp(2.2rem,5vw,3.2rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:1.5rem;font-weight:600}
+h3{font-size:1.08rem;font-weight:600}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.section{display:flex;flex-direction:column;gap:24px}
+.section-head{display:flex;flex-direction:column;gap:6px}
+.section-head p{color:var(--muted);max-width:62ch}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
+.hero>*{min-width:0}
+.intro{display:flex;flex-direction:column;gap:18px}
+.roles{font-size:1.1rem;color:var(--muted);max-width:52ch}
+.roles strong{color:var(--fg);font-weight:600}
+.where{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:.78rem;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 .95rem var(--body);padding:10px 16px;border-radius:8px;border:1px solid var(--accent);text-decoration:none;cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--accent)}
+.email{font-family:var(--mono);font-size:.9rem;color:var(--muted);user-select:all}
+
+/* Workflow trace */
+.trace{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:0;font-family:var(--mono);font-size:.82rem}
+.trace-title{display:flex;justify-content:space-between;color:var(--muted);padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.step{display:grid;grid-template-columns:18px 1fr;gap:12px;position:relative;padding-bottom:14px}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:8px;top:18px;bottom:0;width:2px;background:var(--line)}
+.step:last-child::before{display:none}
+.dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--accent);background:var(--surface);margin-top:4px;margin-left:3px}
+.step.done .dot{background:var(--accent)}
+.step b{font-weight:500;color:var(--fg)}
+.step span{display:block;color:var(--muted)}
+
+/* Tracks */
+.tracks{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.track{border-top:3px solid var(--accent);padding-top:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.track.ngo{border-top-color:var(--amber)}
+.track p{color:var(--muted)}
+
+/* Projects */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.project-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:.72rem;padding:2px 8px;border-radius:4px;background:var(--amber-soft);color:var(--amber);white-space:nowrap}
+.project ul{margin:0;padding-left:18px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.tools span{font-family:var(--mono);font-size:.74rem;padding:2px 8px;border:1px solid var(--line);border-radius:4px;color:var(--muted)}
+.demo{border-top:1px solid var(--line);padding-top:12px}
+.demo summary{cursor:pointer;font-weight:600;color:var(--accent);list-style:none;display:flex;align-items:center;gap:8px}
+.demo summary::-webkit-details-marker{display:none}
+.demo-icon{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);font-size:.65rem}
+.demo-body{display:flex;flex-direction:column;gap:10px;margin-top:10px;color:var(--muted);font-size:.94rem}
+.demo-body strong{color:var(--fg)}
+.demo-msg{margin:0;padding:12px;background:var(--bg);border:1px solid var(--line);border-radius:8px;font-family:var(--mono);font-size:.8rem;white-space:pre-wrap;color:var(--fg);user-select:all}
+.demo .btn{padding:7px 12px;font-size:.88rem}
+.requests{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.requests>*{min-width:0}
+.requests .email-line{font-family:var(--mono);font-size:.85rem}
+.demo-note{display:flex;align-items:center;gap:8px;border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:.92rem}
+.cv-request{background:var(--accent-soft);border-radius:12px;padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.cv-request-head{display:flex;flex-direction:column;gap:4px}
+.cv-request-head p{color:var(--muted);max-width:62ch}
+.cv-request .btn{padding:7px 12px;font-size:.88rem}
+
+/* Experience */
+.timeline{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.role{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.role>*{min-width:0}
+.dates{font-family:var(--mono);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
+.role p{color:var(--muted);margin-top:4px}
+
+/* Certificates */
+.cert-groups{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.cert-groups>*{min-width:0}
+.certs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.cert{display:grid;grid-template-columns:1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.cert>*{min-width:0}
+.cert .who{font-weight:600}
+.cert .what{display:block;color:var(--muted);font-size:.94rem}
+.cert .yr{font-family:var(--mono);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.cert-note{font-size:.9rem;color:var(--muted)}
+
+
+/* Certificate gallery */
+.cert-group{display:flex;flex-direction:column;gap:12px}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.cert-card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;min-width:0;transition:border-color .15s,transform .15s}
+.cert-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.cert-card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.thumb{display:block;aspect-ratio:4/3;background:#fff;border-bottom:1px solid var(--line);overflow:hidden;max-width:100%}
+.thumb img{width:100%;height:100%;object-fit:contain;display:block}
+.cert-meta{display:flex;flex-direction:column;gap:2px;padding:12px 14px}
+.cert-meta .who{font-weight:600;font-size:.92rem}
+.cert-meta .what{color:var(--muted);font-size:.88rem;line-height:1.45}
+.cert-meta .yr{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-top:4px}
+/* Publications */
+.pubs{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.pub{padding:18px 0;border-bottom:1px solid var(--line)}
+.pub-body{display:flex;flex-direction:column;gap:8px;min-width:0}
+.pub-venue{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.pub h3{font-size:1.05rem;max-width:70ch}
+.pub-links{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.pub-links a,.linkish{font:600 .92rem var(--body);color:var(--accent)}
+.linkish{background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+/* Viewer */
+dialog#viewer{border:1px solid var(--line);border-radius:12px;padding:0;background:var(--surface);color:var(--fg);width:min(960px,94vw);max-height:92vh}
+dialog#viewer::backdrop{background:rgba(8,14,12,.72)}
+.viewer-bar{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:14px 18px;border-bottom:1px solid var(--line)}
+.viewer-title{font-weight:600}
+.viewer-who{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.viewer-close{font:600 .9rem var(--body);background:none;border:1px solid var(--line);border-radius:6px;color:var(--fg);padding:6px 12px;cursor:pointer}
+#viewer-img{display:block;width:100%;max-height:calc(92vh - 80px);object-fit:contain;background:#fff}
+
+/* Education */
+.edu{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.edu div{border-left:2px solid var(--line);padding-left:14px;min-width:0}
+.edu span{display:block;color:var(--muted);font-size:.92rem}
+
+/* Contact */
+.contact{background:var(--accent-soft);border-radius:12px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.contact p{color:var(--muted);max-width:60ch}
+.copied{font-family:var(--mono);font-size:.8rem;color:var(--accent)}
+
+@media (max-width:760px){
+  .hero,.tracks,.projects,.cert-groups,.requests{grid-template-columns:1fr}
+  .edu{grid-template-columns:1fr}
+  .role{grid-template-columns:1fr;gap:4px}
+  .wrap{gap:48px;padding-block:32px 48px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .step.live .dot{animation:pulse 1.8s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 var(--accent-soft)}50%{box-shadow:0 0 0 6px var(--accent-soft)}}
+}
+</style>
+
+</head><body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="intro">
+      <div class="eyebrow">Portfolio</div>
+      <h1>Daniel Ghazal</h1>
+      <p class="roles"><strong>AI automation &amp; agent builder</strong> with 5+ years of <strong>project management</strong> in international development. I build workflows and AI agents that take repetitive work off teams, and I scope them around real processes, budgets and people.</p>
+      <div class="where">
+        <span class="chip">Beirut, Lebanon</span>
+        <span class="chip">Remote: US &amp; GCC</span>
+        <span class="chip">Arabic · English</span>
+      </div>
+    </div>
+
+    <div class="trace" aria-label="Example run of the Slack project management bot">
+      <div class="trace-title"><span>pm-bot · example run</span><span>Slack → ClickUp</span></div>
+      <div class="step done"><i class="dot"></i><div><b>Request in Slack</b><span>"Launch the Q1 onboarding project"</span></div></div>
+      <div class="step done"><i class="dot"></i><div><b>Agent plans the project</b><span>tasks, owners, due dates</span></div></div>
+      <div class="step done"><i class="dot"></i><div><b>ClickUp project created</b><span>structured list, assignees set</span></div></div>
+      <div class="step live"><i class="dot"></i><div><b>Due-date watchdog</b><span>chases owners, flags blocked work</span></div></div>
+      <div class="step"><i class="dot"></i><div><b>Status report to Slack</b><span>weekly summary for stakeholders</span></div></div>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="tracks-h">
+    <div class="section-head">
+      <div class="eyebrow">What I do</div>
+      <h2 id="tracks-h">Two tracks, one way of working</h2>
+    </div>
+    <div class="tracks">
+      <div class="track">
+        <h3>AI automation &amp; agents</h3>
+        <p>AI agents and automated workflows for content, email and invoice processing, sales reporting and project follow-up. Built with n8n, Zapier, Hermes Agent and Claude Code, connected to Slack, ClickUp, GoHighLevel, Shopify and Google Workspace.</p>
+      </div>
+      <div class="track ngo">
+        <h3>Humanitarian project management</h3>
+        <p>Project delivery, disability inclusion and accessibility assessments, training of trainers, donor reporting and financial follow-up with War Child Alliance, Humanity &amp; Inclusion, the British Council and EUROMED Feminist Initiative.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="exp-h">
+    <div class="section-head">
+      <div class="eyebrow">Experience</div>
+      <h2 id="exp-h">Project management</h2>
+    </div>
+    <div class="timeline">
+      <div class="role"><div class="dates">Jun 2025 – Jun 2026</div><div><h3>Education Assistant · War Child Alliance</h3><p>Delivered 5 training-of-trainers sessions on the Can't Wait to Learn platform; built an accessibility assessment tool and assessed 6 education centres in the Bekaa.</p></div></div>
+      <div class="role"><div class="dates">Nov 2024 – May 2025</div><div><h3>Inclusion Officer · Humanity &amp; Inclusion</h3><p>Inclusion assessments of service providers and medical centres; capacity-building on disability inclusion; managed the project database.</p></div></div>
+      <div class="role"><div class="dates">Mar 2023 – Oct 2024</div><div><h3>Project Officer · Humanity &amp; Inclusion</h3><p>Delivered 3 accessible playground renovations and a rehabilitation centre; rolled out 1,200+ tablets to public-school students; 16 trainings across 3 regions.</p></div></div>
+      <div class="role"><div class="dates">Aug 2022 – Nov 2022</div><div><h3>Program Officer · EUROMED Feminist Initiative</h3><p>Drafted sections of the MENA country report; planned 6 conferences and facilitated 4 trainings.</p></div></div>
+      <div class="role"><div class="dates">Jan 2022 – Jul 2022</div><div><h3>Project Coordinator · British Council</h3><p>Audited financial reports for 6 projects ($125,837); mapped 15 NGO partners; weekly country and risk reports.</p></div></div>
+      <div class="role"><div class="dates">May 2021 – Dec 2021</div><div><h3>Project Support Officer · Tri-Pulley NGO</h3><p>Monthly financial and quarterly narrative reports; procurement of 42 items; 6 Excel databases.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="projects-h">
+    <div class="section-head">
+      <div class="eyebrow">Projects</div>
+      <h2 id="projects-h">AI &amp; automation builds</h2>
+      <p>These are training and demo builds, made during the DeployAIBots and Remotely X programmes.</p>
+    </div>
+    <div class="projects">
+      <article class="project">
+        <div class="project-top"><h3>AI project management bot for Slack</h3><span class="tag">DeployAIBots training</span></div>
+        <ul>
+          <li>Turns a Slack request into a ClickUp project with tasks, owners and due dates.</li>
+          <li>Chases task owners, escalates overdue or blocked work, and flags risks before deadlines.</li>
+          <li>Posts status reports to Slack and updates timelines when scope changes.</li>
+        </ul>
+        <div class="tools"><span>Hermes Agent</span><span>Slack</span><span>ClickUp</span><span>OpenRouter</span><span>n8n</span></div>
+        <p class="demo-note"><span class="demo-icon" aria-hidden="true">&#9654;</span> 7-minute demo video available on request. <a href="#request-video">Request it below</a>.</p>
+      </article>
+      <article class="project">
+        <div class="project-top"><h3>Email attachment &amp; invoice processing</h3><span class="tag">Training project</span></div>
+        <ul>
+          <li>Monitors an inbox, sorts incoming attachments and routes each file by type.</li>
+          <li>Uses AI to extract invoice data (client, reference, amount, currency, date) into Google Sheets.</li>
+          <li>Archives every document with a consistent folder and naming structure.</li>
+        </ul>
+        <div class="tools"><span>n8n</span><span>Gmail</span><span>Google Sheets</span><span>Google Drive</span></div>
+      </article>
+      <article class="project">
+        <div class="project-top"><h3>GoHighLevel paid-acquisition dashboard</h3><span class="tag">Remotely X training</span></div>
+        <ul>
+          <li>Compares leads, pipeline progress, conversion and closed revenue by ad source.</li>
+          <li>Cleaned a 354-contact / 236-opportunity training dataset, excluding 49 test and duplicate records.</li>
+          <li>Built on mock data provided for the training.</li>
+        </ul>
+        <div class="tools"><span>GoHighLevel API</span><span>Claude Code</span><span>GitHub</span></div>
+      </article>
+      <article class="project">
+        <div class="project-top"><h3>RAG LinkedIn content chatbot</h3><span class="tag">Remotely X training</span></div>
+        <ul>
+          <li>Drafts LinkedIn posts written for reach and engagement.</li>
+          <li>Uses retrieval-augmented generation so each post draws on a curated knowledge base.</li>
+        </ul>
+        <div class="tools"><span>n8n AI Agent</span><span>Simple Memory</span><span>RAG</span></div>
+      </article>
+    </div>
+    <div class="requests">
+      <div class="cv-request" id="request-video">
+        <div class="cv-request-head">
+          <h3>Request the demo video</h3>
+          <p>A 7-minute screen recording of my AI project management bot for Slack being built and run. I share it privately after reviewing each request.</p>
+        </div>
+        <pre class="demo-msg" id="demo-msg">Hi Daniel, I saw your portfolio and would like to see the demo video of your AI project management bot for Slack.
+Name:
+Organization:
+Role:</pre>
+        <div class="actions">
+          <button class="btn ghost" type="button" id="copy-demo-msg">Copy message</button>
+          <button class="btn ghost" type="button" data-email="career.danielgh@gmail.com">Copy email</button>
+          <span class="email">career.danielgh@gmail.com</span>
+          <a class="btn primary" href="https://www.linkedin.com/in/daniel-ghazal-/" target="_blank" rel="noopener">LinkedIn</a>
+          <span class="copied" hidden>Copied</span>
+        </div>
+      </div>
+      <div class="cv-request">
+        <div class="cv-request-head">
+          <h3>Request my CV</h3>
+          <p>I send my latest CV by email. Tell me which version you need: AI automation, or humanitarian project management.</p>
+        </div>
+        <pre class="demo-msg" id="cv-msg">Hi Daniel, I saw your portfolio and would like a copy of your CV.
+Version: AI automation / Humanitarian project management
+Name:
+Organization:
+Role:</pre>
+        <div class="actions">
+          <button class="btn ghost" type="button" id="copy-cv-msg">Copy message</button>
+          <button class="btn ghost" type="button" data-email="career.danielgh@gmail.com">Copy email</button>
+          <span class="email">career.danielgh@gmail.com</span>
+          <a class="btn primary" href="https://www.linkedin.com/in/daniel-ghazal-/" target="_blank" rel="noopener">LinkedIn</a>
+          <span class="copied" hidden>Copied</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="edu-h">
+    <div class="section-head">
+      <div class="eyebrow">Education</div>
+      <h2 id="edu-h">American University of Science and Technology</h2>
+    </div>
+    <div class="edu">
+      <div><h3>BS Business Administration</h3><span>Major: Accounting, with Honors</span></div>
+      <div><h3>BA Humanities</h3><span>Major: International Affairs, with Honors</span></div>
+      <div><h3>Teaching Diploma</h3><span>Teaching Economics</span></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="pub-h">
+    <div class="section-head">
+      <div class="eyebrow">Publications</div>
+      <h2 id="pub-h">Research papers</h2>
+      <p>Published research on politics and policy. <a href="https://independent.academia.edu/GhazalDaniel" target="_blank" rel="noopener">Academia.edu profile</a></p>
+    </div>
+    <div class="pubs">
+      <article class="pub">
+        <div class="pub-body">
+          <span class="pub-venue">Academia.edu · 2021</span>
+          <h3>Al Nahda Dam: From Egypt's Existential Threat towards Development</h3>
+          <div class="pub-links">
+            <a href="https://www.academia.edu/73617925/Al_Nahda_Dam_From_Egypt_s_Existential_Threat_towards_Development" target="_blank" rel="noopener">Read the paper</a>
+          </div>
+        </div>
+      </article>
+      <article class="pub">
+        <div class="pub-body">
+          <span class="pub-venue">IJISRT · Vol. 7, Issue 4 · April 2022</span>
+          <h3>Migration Dilemma: The Blessing of Incorporation and Isolation Repercussion, Policies Gone Wrong and Miscalculation of Impact</h3>
+          <div class="pub-links">
+            <a href="https://ijisrt.com/migration-dilemma-the-blessing-of-incorporation-and-isolation-repercussion-policies-gone-wrong-and-miscalculation-of-impact" target="_blank" rel="noopener">Read the paper</a>
+            <a href="https://www.academia.edu/107803055/Migration_Dilemma_The_Blessing_of_Incorporation_and_Isolation_Repercussion_Policies_Gone_Wrong_and_Miscalculation_Of_Impact" target="_blank" rel="noopener">Academia.edu</a>
+            <button class="linkish" type="button" data-src="certs/ijisrt-migration.jpg" data-title="Author certificate: Migration Dilemma" data-who="IJISRT · April 2022">Author certificate</button>
+          </div>
+        </div>
+      </article>
+      <article class="pub">
+        <div class="pub-body">
+          <span class="pub-venue">IJISRT · Vol. 7, Issue 3 · March 2022</span>
+          <h3>Revolution in the 21st Century: A Close Inspection of the New Factors to Consider in Modern Day Uprisals, Changes, and Epilogue</h3>
+          <div class="pub-links">
+            <a href="https://ijisrt.com/revolution-in-the-21st-century-a-close-inspection-of-the-new-factors-to-consider-in-modern-day-appraisals-changes-and-epilogue" target="_blank" rel="noopener">Read the paper</a>
+            <a href="https://zenodo.org/records/6448180" target="_blank" rel="noopener">Zenodo (PDF)</a>
+            <button class="linkish" type="button" data-src="certs/ijisrt-revolution.jpg" data-title="Author certificate: Revolution in the 21st Century" data-who="IJISRT · March 2022">Author certificate</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="certs-h">
+    <div class="section-head">
+      <div class="eyebrow">Certificates &amp; training</div>
+      <h2 id="certs-h">Certificates</h2>
+      <p>Select any certificate to view it full size.</p>
+    </div>
+    <div class="cert-group">
+      <h3>AI &amp; project management</h3>
+      <div class="cert-grid">
+        <button class="cert-card" type="button" data-src="certs/remotelyx-ai.jpg" data-title="Certified AI Consultant: 12-week AI Consultant Program, capstone projects passed" data-who="Remotely X · NexusForAI · 2026">
+          <span class="thumb"><img src="certs/remotelyx-ai.jpg" alt="Remotely X certificate: Certified AI Consultant" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">Remotely X · NexusForAI</span><span class="what">Certified AI Consultant: 12-week AI Consultant Program, capstone projects passed</span><span class="yr">2026</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/kanz-ai.jpg" data-title="AI Training Hackathon, foundational proficiency in artificial intelligence" data-who="Kanz AI · LAU Academy of Continuing Education · 2026">
+          <span class="thumb"><img src="certs/kanz-ai.jpg" alt="Kanz AI · LAU Academy of Continuing Education certificate: AI Training Hackathon, foundational proficiency in artificial intelligence" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">Kanz AI · LAU Academy of Continuing Education</span><span class="what">AI Training Hackathon, foundational proficiency in artificial intelligence</span><span class="yr">2026</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/pmi-pmp-prep.jpg" data-title="PMI Authorized PMP Exam Preparation Course (credential #1664251)" data-who="Project Management Institute · 2022">
+          <span class="thumb"><img src="certs/pmi-pmp-prep.jpg" alt="Project Management Institute certificate: PMI Authorized PMP Exam Preparation Course (credential #1664251)" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">Project Management Institute</span><span class="what">PMI Authorized PMP Exam Preparation Course (credential #1664251)</span><span class="yr">2022</span></span>
+        </button>
+      </div>
+    </div>
+    <div class="cert-group">
+      <h3>Proposal writing &amp; NGO management</h3>
+      <div class="cert-grid">
+        <button class="cert-card" type="button" data-src="certs/nrc-cbpf.jpg" data-title="OCHA Country-Based Pooled Funds (CBPFs)" data-who="Norwegian Refugee Council · 2021">
+          <span class="thumb"><img src="certs/nrc-cbpf.jpg" alt="Norwegian Refugee Council certificate: OCHA Country-Based Pooled Funds (CBPFs)" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">Norwegian Refugee Council</span><span class="what">OCHA Country-Based Pooled Funds (CBPFs)</span><span class="yr">2021</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/stc-proposal.jpg" data-title="An Introduction to Proposal and Report Writing" data-who="Save the Children · 2021">
+          <span class="thumb"><img src="certs/stc-proposal.jpg" alt="Save the Children certificate: An Introduction to Proposal and Report Writing" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">Save the Children</span><span class="what">An Introduction to Proposal and Report Writing</span><span class="yr">2021</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/iabc-ngo.jpg" data-title="Diploma in NGO Management, 50 training hours" data-who="International Academy for Building Capacity · 2021">
+          <span class="thumb"><img src="certs/iabc-ngo.jpg" alt="International Academy for Building Capacity certificate: Diploma in NGO Management, 50 training hours" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">International Academy for Building Capacity</span><span class="what">Diploma in NGO Management, 50 training hours</span><span class="yr">2021</span></span>
+        </button>
+      </div>
+    </div>
+    <div class="cert-group">
+      <h3>UN &amp; sustainable development</h3>
+      <div class="cert-grid">
+        <button class="cert-card" type="button" data-src="certs/unssc-paris.jpg" data-title="The Paris Agreement on Climate Change as a Development Agenda" data-who="UN System Staff College · UNFCCC · 2022">
+          <span class="thumb"><img src="certs/unssc-paris.jpg" alt="UN System Staff College · UNFCCC certificate: The Paris Agreement on Climate Change as a Development Agenda" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">UN System Staff College · UNFCCC</span><span class="what">The Paris Agreement on Climate Change as a Development Agenda</span><span class="yr">2022</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/unssc-unsdcf.jpg" data-title="UN Sustainable Development Cooperation Framework" data-who="UN System Staff College · 2022">
+          <span class="thumb"><img src="certs/unssc-unsdcf.jpg" alt="UN System Staff College certificate: UN Sustainable Development Cooperation Framework" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">UN System Staff College</span><span class="what">UN Sustainable Development Cooperation Framework</span><span class="yr">2022</span></span>
+        </button>
+      </div>
+    </div>
+    <div class="cert-group">
+      <h3>Disability inclusion &amp; rights</h3>
+      <div class="cert-grid">
+        <button class="cert-card" type="button" data-src="certs/arc-binaa.jpg" data-title="Leaders of Inclusion Program: 15 days of training and mentoring on resilience, self-leadership, self-advocacy and advocacy strategy (BINA', EU-funded)" data-who="arcenciel · Transparency International · 2025">
+          <span class="thumb"><img src="certs/arc-binaa.jpg" alt="arcenciel certificate: Leaders of Inclusion Program" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">arcenciel · BINA' (EU-funded)</span><span class="what">Leaders of Inclusion Program: 15 days of training and mentoring on self-leadership, self-advocacy and advocacy strategy</span><span class="yr">2025</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/arc-self-advocacy.jpg" data-title="Self-Advocacy and Rights of People with Disability, 6 hours" data-who="arcenciel · 2021">
+          <span class="thumb"><img src="certs/arc-self-advocacy.jpg" alt="arcenciel certificate: Self-Advocacy and Rights of People with Disability, 6 hours" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">arcenciel</span><span class="what">Self-Advocacy and Rights of People with Disability, 6 hours</span><span class="yr">2021</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/arc-rights-duties.jpg" data-title="Rights and Duties of People with Disabilities, 1-day workshop" data-who="arcenciel · AFD · 2021">
+          <span class="thumb"><img src="certs/arc-rights-duties.jpg" alt="arcenciel · AFD certificate: Rights and Duties of People with Disabilities, 1-day workshop" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">arcenciel · AFD</span><span class="what">Rights and Duties of People with Disabilities, 1-day workshop</span><span class="yr">2021</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/arc-life-skills.jpg" data-title="Life Skills training, 6 hours" data-who="arcenciel · 2021">
+          <span class="thumb"><img src="certs/arc-life-skills.jpg" alt="arcenciel certificate: Life Skills training, 6 hours" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">arcenciel</span><span class="what">Life Skills training, 6 hours</span><span class="yr">2021</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/arc-entrepreneurship.jpg" data-title="Basics of Entrepreneurship Skills, 9 hours" data-who="arcenciel · 2021">
+          <span class="thumb"><img src="certs/arc-entrepreneurship.jpg" alt="arcenciel certificate: Basics of Entrepreneurship Skills, 9 hours" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">arcenciel</span><span class="what">Basics of Entrepreneurship Skills, 9 hours</span><span class="yr">2021</span></span>
+        </button>
+      </div>
+    </div>
+    <div class="cert-group">
+      <h3>Safety &amp; security</h3>
+      <div class="cert-grid">
+        <button class="cert-card" type="button" data-src="certs/safe-international.jpg" data-title="SAFE International, delivered at the British Embassy Beirut" data-who="First Option Safety Group · 2022">
+          <span class="thumb"><img src="certs/safe-international.jpg" alt="First Option Safety Group certificate: SAFE International, delivered at the British Embassy Beirut" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">First Option Safety Group</span><span class="what">SAFE International, delivered at the British Embassy Beirut</span><span class="yr">2022</span></span>
+        </button>
+      </div>
+    </div>
+    <div class="cert-group">
+      <h3>Degrees</h3>
+      <div class="cert-grid">
+        <button class="cert-card" type="button" data-src="certs/ba-intl-affairs.jpg" data-title="BA Humanities (International Affairs), with Honors" data-who="American University of Science and Technology · 2023">
+          <span class="thumb"><img src="certs/ba-intl-affairs.jpg" alt="AUST diploma: Bachelor of Arts with Honors" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">American University of Science and Technology</span><span class="what">BA Humanities (International Affairs), with Honors</span><span class="yr">2023</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/bs-accounting.jpg" data-title="BS Business Administration (Accounting), with Honors" data-who="American University of Science and Technology · 2020">
+          <span class="thumb"><img src="certs/bs-accounting.jpg" alt="American University of Science and Technology certificate: BS Business Administration (Accounting), with Honors" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">American University of Science and Technology</span><span class="what">BS Business Administration (Accounting), with Honors</span><span class="yr">2020</span></span>
+        </button>
+        <button class="cert-card" type="button" data-src="certs/teaching-diploma.jpg" data-title="Teaching Diploma" data-who="American University of Science and Technology · 2021">
+          <span class="thumb"><img src="certs/teaching-diploma.jpg" alt="American University of Science and Technology certificate: Teaching Diploma" loading="lazy"></span>
+          <span class="cert-meta"><span class="who">American University of Science and Technology</span><span class="what">Teaching Diploma</span><span class="yr">2021</span></span>
+        </button>
+      </div>
+    </div>
+    <div class="cert-group">
+      <h3>Also completed</h3>
+      <ul class="certs">
+        <li class="cert"><div><span class="who">DeployAIBots</span><span class="what">AI bot-building and automation course</span></div><span class="yr">2026</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <div class="viewer-bar">
+      <div><div class="viewer-title" id="viewer-title"></div><div class="viewer-who" id="viewer-who"></div></div>
+      <div style="display:flex;gap:10px;align-items:center"><a id="viewer-full" href="#" target="_blank" rel="noopener" style="font-weight:600;font-size:.9rem">Open full size</a><button type="button" class="viewer-close" id="viewer-close" aria-label="Close">Close</button></div>
+    </div>
+    <img id="viewer-img" alt="">
+  </dialog>
+
+  <section class="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Get in touch</h2>
+    <p>Open to project management roles in Beirut and remote AI automation or agent-building roles with teams in the US and the Gulf.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://www.linkedin.com/in/daniel-ghazal-/" target="_blank" rel="noopener">Message me on LinkedIn</a>
+      <button class="btn ghost" id="copy-email-bottom" type="button" data-email="career.danielgh@gmail.com">Copy email</button>
+      <span class="email">career.danielgh@gmail.com</span>
+      <span class="copied" id="copied" hidden>Email copied</span>
+    </div>
+  </section>
+
+</div>
+
+<script>
+document.querySelectorAll('[data-email]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var email=btn.getAttribute('data-email'), note=btn.parentElement.querySelector('.copied');
+    function done(){btn.textContent='Copied';note.hidden=false;setTimeout(function(){btn.textContent='Copy email';note.hidden=true},2000)}
+    function fallback(){var el=btn.parentElement.querySelector('.email');if(el){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}}
+    try{navigator.clipboard.writeText(email).then(done,fallback)}catch(e){fallback()}
+  });
+});
+
+(function(){
+  var b=document.getElementById('copy-cv-msg');
+  if(b)b.addEventListener('click',function(){
+    var el=document.getElementById('cv-msg');
+    function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy message'},2000)}
+    function fb(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(el.textContent).then(ok,fb)}catch(e){fb()}
+  });
+})();
+(function(){
+  var b=document.getElementById('copy-demo-msg');
+  if(b)b.addEventListener('click',function(){
+    var t=document.getElementById('demo-msg').textContent, note=b.parentElement.querySelector('.copied');
+    function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy message'},2000)}
+    function fb(){var r=document.createRange();r.selectNodeContents(document.getElementById('demo-msg'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(t).then(ok,fb)}catch(e){fb()}
+  });
+})();
+(function(){
+  var dlg=document.getElementById('viewer'),img=document.getElementById('viewer-img');
+  document.querySelectorAll('[data-src]').forEach(function(el){
+    el.addEventListener('click',function(){
+      img.src=el.dataset.src; img.alt=el.dataset.title; document.getElementById('viewer-full').href=el.dataset.src;
+      document.getElementById('viewer-title').textContent=el.dataset.title;
+      document.getElementById('viewer-who').textContent=el.dataset.who;
+      if(dlg.showModal){dlg.showModal()}else{window.open(el.dataset.src,'_blank')}
+    });
+  });
+  document.getElementById('viewer-close').addEventListener('click',function(){dlg.close()});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+})();
+</script>
+
+</body></html>
